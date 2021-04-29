@@ -1,0 +1,44 @@
+.number{
+    @include bg-color($third-color);
+    &-list{
+        @include flexBox();
+    }
+    &-item{
+        text-transform: uppercase;
+        color: white;
+        padding: 8rem 2.5rem;
+        text-align: center;
+        line-height: 1;
+        width: 20%;
+        border-left: 1px solid;
+        border-right:last-child 1px solid;
+        &:last-child{
+            border-right: 1px solid white;
+        }
+        &-count{
+            font-size: 7.2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+    }
+    @include maxWidth(767px){
+        .number-list {
+            flex-direction: column;
+        }
+        .number-item {
+            padding: 3rem 1rem;
+            width: 100%;
+            border-left: 0;
+            
+            border-right: 0;
+            &:not(:last-child){
+                border-bottom: 1px solid white;
+            }
+        }
+        .number-item-count {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -1,0 +1,246 @@
+.header{
+	min-height: 100rem;
+	background: linear-gradient(
+		rgba($primary-color,0.6),
+		rgba($secondary-color,0.6)
+	),
+	url(../images/img-header-bg.jpg) no-repeat center/cover;
+	color: white;
+	&-top{
+		display: flex;
+		justify-content: space-between;
+		padding-top: 3rem;
+		align-items: baseline;
+	}
+	&-menu{
+		display: flex;
+	}
+
+	&-logo{
+		font-size: 3rem;
+		font-weight: bold;
+		color: white;
+	}
+	&-menu-link{
+		text-transform: uppercase;
+		display: inline-block;
+
+	}
+	&-menu-icon{
+		color: white;
+	}
+	&-content{
+		padding-top: 17rem;
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+		&-caption{
+			font-size: 7.2rem;
+			font-family: $third-font;
+			margin-bottom: 4rem;
+			
+		}
+		&-main{
+			font-size: 15rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			position: relative;
+			padding-bottom: 6rem;
+			margin-bottom: 5rem;
+			&::after{
+				content: "";
+				@include absoluteCenter("left");
+				bottom: 0;
+				width: 6rem;
+				height: 0.3rem;
+				background-color: white;
+			}
+		}
+		&-more{
+			padding: 1rem 3rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: white;
+			display: inline-block;
+			border: 3px solid white;
+		}
+	}
+	&-bottom{
+		margin-top: 15.5rem;
+		padding-bottom: 3rem;
+		display: flex;
+		flex-wrap: wrap;
+		&-item{
+			border-top: 3px solid white;
+			padding-top: 3rem;
+			width: calc(25% - 30px);
+			margin-left: 3rem;
+			position: relative;
+			cursor: pointer;
+			opacity: 0.6;
+			&::before{
+				content: "";
+				position: absolute;
+				@include size(7rem,0.3rem);
+				background-color: $primary-color;
+				top: 0;
+				left: 0;
+				transform: translateY(-100%);
+				opacity: 0;
+				transition: all ;
+			}
+			&:hover,
+			&.is-active{
+				opacity: 1;
+				&::before{
+					content: "";
+					opacity: 1;
+				}
+			}
+		}
+		&-number{
+			font-size: 2.4rem;
+			font-weight: bold;
+			padding-right: 10px;
+		}
+		&-intro{
+			text-transform: uppercase;
+			font-size: 1.8rem;
+		}
+	}
+	&-menuToggle{
+		position: relative;
+		top:5px;
+		align-self: center;
+		background-color: red;
+		@include size(2.5rem,2.5rem);
+		align-self: center;
+		background: url(../images/menu.png) no-repeat;
+		background-size: 30px;
+		background-position: center;
+		cursor: pointer;
+		display: none;
+		
+	}
+	.header-menuToggle.active{
+		background: url(../images/close.png) ;
+		background-repeat: no-repeat;
+		background-size: 25px;
+		background-position: center;
+		cursor: pointer;
+	}
+	@include minWidth(768px) {
+		&-menu-link{
+			color: white;
+			display: inline-block;
+			padding-bottom: 1.5rem;
+			position: relative;
+			&:after{
+				content: "";
+				position: absolute;
+				display: inline-block;
+				left: 0;
+				width: 0;
+				background-color: $secondary-color;
+				height: 3px;
+				bottom: 5px;
+				transition: all 0.3s linear;
+			}
+			&:hover::after{
+				width: 100%;
+			}
+		}
+		&-menu-item:not(:first-child){
+			margin-left:5.5rem;
+		}
+		
+	}
+	@include maxWidth(1023px){
+		.header-menu-item:not(:first-child) {
+			margin-left: 4rem;
+		}
+		.header-content-main {
+			font-size: 11rem;
+		}
+	}
+	@include maxWidth(767px){
+		&{
+			min-height: unset;
+		}
+
+		.header-menu{
+			position: fixed;
+			right:-300px;
+			top: 0;
+			bottom: 0;
+			z-index: 10;
+			background-color: white;
+			width: 200px;
+			display: block;
+			padding:30px 30px;
+			margin-top: 7rem;
+			text-align: center;
+			transition: all 0.5s linear;
+		}
+		.header-menu.active{
+			right: 0px;
+		}
+		.header-menu-item:not(:first-child) {
+			margin-left: 0rem;
+		}
+		.header-menu-item{
+			margin-bottom: 1rem;
+		}
+		.header-menu-icon{
+			color: $title-color;
+			padding: 1.5rem;
+			display: block;
+			&:hover{
+				color: $primary-color;
+				background: $secondary-color;
+			}
+		}
+		.header-menu-link{
+			color: $title-color;
+			width: 100%;
+			display: block;
+			padding: 1.5rem;
+			border-radius: 4px;
+			&:hover{
+				color: white;
+				background-color: $secondary-color;
+			}
+		}
+		.header-content {
+			padding-top: 5rem;
+		}
+		.header-content-caption {
+			font-size: 3.2rem;
+			margin-bottom: 1rem;
+		}
+		.header-content-main {
+			font-size: 5rem;
+			padding-bottom: 4rem;
+			margin-bottom: 4rem;
+		}
+		.header-bottom {
+			margin-top: 5.5rem;
+		}
+		.header-bottom-intro{
+			display: none;
+		}
+		.header-bottom-item {
+			text-align: center;
+			
+			&::before{
+				@include size(2.5rem,0.3rem)
+			}
+		}
+		.header-menuToggle{
+			display: block;
+		}
+	
+	}
+
+
+}

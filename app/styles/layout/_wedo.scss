@@ -1,0 +1,83 @@
+.wedo{
+    padding: 11rem 0;
+    
+    &-item-header{
+        @include    flexBox(flex,flex-start,center);
+        padding: 1.5rem;
+        border:1px solid $gray-light-color;
+        cursor: pointer;
+        &-icon{
+            margin-right: 1.5rem;
+        }
+        &-title{
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $text-color;
+            @include textClamp(1);
+            padding-right: 4rem;
+        }
+        &-arrow{
+            margin-left:  auto;
+            font-size: 3rem;
+            color: $text-color;
+            font-weight: 500;
+        }
+
+    }
+    &-item:not(:last-child){
+		margin-bottom: 1rem;
+	}
+	&-item.is-active .wedo-item-content{
+		display:block;
+	}
+    &-item-content{
+        padding: 2rem;
+        border:1px solid $gray-light-color;
+        color: $text-color;
+        line-height: 1.6;
+        font-family: $secondary-font;
+        font-style: italic;
+        font-size: 1.5rem;
+        font-weight: 300;
+        display: none;
+		border-top: 0;
+        ::-webkit-scrollbar {
+            width: 5px;
+			border-radius: 20px;
+        } 
+        ::-webkit-scrollbar-track {
+            background: $gray-light-color;
+			border-radius: 20px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: $third-color;
+			border-radius: 20px;
+            
+        }
+
+    }
+    &-item-text{
+        height: 14rem;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+	@include minWidth(768px){
+		&-container{
+			// display: grid;
+			// grid-template-columns: repeat(2,1fr);
+			// grid-gap:0 3 ;
+			@include flexBox(flex,space-between);      
+		}
+		&-image,
+		&-content{
+			width: calc(50% - 1.5rem);
+		}
+	}
+	@include maxWidth(767px){
+			padding: 7rem 0;
+		&-content{
+			padding-top: 2rem;
+		}
+	}
+
+}

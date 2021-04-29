@@ -1,0 +1,89 @@
+//- mixin ListItem(title=" this is a  default title",caption)
+//- 	li.List-Item 
+//- 		h2.List-Title= title 
+//- 		if caption
+//- 			span.List-Caption= caption
+//- 		if block 
+//- 			block
+
+//-Header
+mixin headerMenuItem(title,href="#")
+	li.header-menu-item 
+		a.header-menu-link(href=href)= title
+mixin headerBottomItem(number,title)
+	.header-bottom-item
+		span.header-bottom-number=number 
+		span.header-bottom-intro=title
+
+//- About
+mixin blockBox(caption,title,desc)
+	.block-box
+		h3.block-box-caption=caption 
+		h1.block-box-heading=title
+		if desc 
+			p.block-box-desc=desc
+
+mixin aboutItem(src , iconClass , title , alt="")
+	.about-item 
+		img.about-image(src= src,alt= alt)
+		.about-content
+			i.about-icon(class= iconClass)
+			span.about-title= title
+
+//mixin for blocknumber
+mixin blockNumber(number , text)
+	.number-item 
+		h2.number-item-count= number 
+		span.number-item-text= text
+//mixin for blockservice
+mixin blockService(src,title,desc)
+	.service-item 
+		img.service-item-icon(src= src)
+		.service-item-info 
+			h2.service-item-info-title= title
+			p.service-item-info-desc= desc
+
+//mixin for blockwedo
+mixin WedoItem(src,title,caption , active = "")
+	.wedo-item(class= active)
+		.wedo-item-header 
+			img(src= src).wedo-item-header-icon
+			h3.wedo-item-header-title= title
+			i.fa.fa-angle-up.wedo-item-header-arrow
+		.wedo-item-content
+			.wedo-item-text= caption
+//mixin for team-social
+mixin team-social(facebook = "#",twitter = "#", pinterest= "#",instagram = "#")
+	ul.team-social
+		li.team-social-item
+			a.team-social-link(href= facebook)
+				i.fab.fa-facebook-f
+		li.team-social-item
+			a.team-social-link(href=twitter)
+				i.fab.fa-twitter
+		li.team-social-item
+			a.team-social-link(href=pinterset)
+				i.fab.fa-pinterest
+		li.team-social-item
+			a.team-social-link(href=instagram)
+				i.fab.fa-instagram
+//mixin for blockteam
+mixin teamItem(src,title,position)
+	.team-item
+		.team-main 
+			img(src= src).team-images
+			.team-content
+				if block 
+					block 
+				
+		.team-info
+			h3.team-title= title  
+			span.team-position= position
+//mixin for blockWork
+mixin workItem(src,icon,title,full="",desc)
+	.work-item(class= full)
+		img(src=src).work-image
+		.work-content 
+			i.work-icon(class= icon)
+			h3.work-content-title= title
+			span.work-content-desc= desc

@@ -1,0 +1,55 @@
+.service{
+    @include bg-color(white);
+    padding: 11rem 0 12rem;
+    &-list{
+        @include flexBox(flex,space-between);
+        margin-top: 6.5rem;
+        &:first-of-type{
+            border-bottom: 1px solid $gray-dark-color;
+            padding-bottom: 4rem;
+            margin-bottom: 4rem;
+        }
+    }
+    &-item{
+        width: calc(33.33% - 1.4rem);
+        @include flexBox(flex,flex-start,flex-start);
+        
+    }
+    &-item-icon{
+        padding: 0 3rem;
+    }
+    &-item-info{
+      
+     width: calc(100% - 6.5rem);
+     @include flexBox(flex,space-between,flex-start,column);
+     height: 100%;
+      
+      &-title{
+        color: $title-color;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        line-height: 1.6;
+        @include textClamp(1);
+    }
+    &-desc{
+        color: $text-color;
+        line-height: 1.6;
+        font-family: $secondary-font;
+    }
+    }
+    @include maxWidth(1023px){
+        padding:5rem 0;
+        .service-list{
+            display: block;
+        }
+        
+        .service-item{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .service-item-info-title{
+            margin-bottom: 1rem;
+        }
+    }
+}

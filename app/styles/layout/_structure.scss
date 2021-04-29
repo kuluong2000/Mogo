@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.wapper{
+    max-width: $wrapper;
+    margin: 0 auto;
+}
+.container{
+    max-width: $container + 30px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.block-box{
+    text-align: center;
+    max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
+    &-caption{
+        font-family: $third-font;
+        font-size: 2.4rem;
+        padding-bottom: 2.5rem;
+    }
+    &-heading{
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 4rem;
+        margin-bottom: 4.7rem;
+        position: relative;
+        &::after{
+            content: "";
+            @include size(6rem,0.3rem);
+            @include absoluteCenter(left);
+            @include bg-color($primary-color);
+            bottom: 0;
+        }
+    }
+    &-desc{
+        font-size: 1.5rem;
+        font-family: $secondary-font;
+        line-height: 1.5;
+        color: $text-color;
+        margin-bottom: 10.5rem;
+        
+        
+    }
+    @include maxWidth(767px){
+        .block-box-caption{
+            font-size: 2rem;
+            padding-bottom: 1.5rem;
+        }
+        .block-box-heading {
+            font-size: 2.5rem;
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .block-box-desc {
+            margin-bottom: 5.5rem;
+        }
+    }
+}

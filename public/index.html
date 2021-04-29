@@ -1,0 +1,493 @@
+
+<!--mixin for blocknumber-->
+<!--mixin for blockservice-->
+<!--mixin for blockwedo-->
+<!--mixin for team-social-->
+<!--mixin for blockteam-->
+<!--mixin for blockWork--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Gulp Template workflow</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="styles/fontawesome.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;family=Montserrat:ital,wght@0,400;0,500;0,700;1,200&amp;family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
+    <!--slick silder-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  </head>
+  <body class="home-page">
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="container"> 
+          <div class="header-top"><a class="header-logo" href="index.html">MoGo </a>
+            <div class="header-menuToggle" onclick="menuToggle()"></div>
+            <ul class="header-menu"> 
+              <li class="header-menu-item"> <a class="header-menu-link" href="#About">About</a></li>
+              <li class="header-menu-item"> <a class="header-menu-link" href="#Service">Service</a></li>
+              <li class="header-menu-item"> <a class="header-menu-link" href="#device">Work</a></li>
+              <li class="header-menu-item"> <a class="header-menu-link" href="#">Blog</a></li>
+              <li class="header-menu-item"> <a class="header-menu-link" href="#">Contact</a></li>
+              <li class="header-menu-item"> <a class="header-menu-icon" href="#"><i class="fa fa-shopping-cart"></i></a></li>
+              <li class="header-menu-item"> <a class="header-menu-icon" href="#"> <i class="fa fa-search"></i></a></li>
+            </ul>
+          </div>
+          <div class="header-content"> 
+            <h2 class="header-content-caption">Create Template</h2>
+            <h1 class="header-content-main">Welcome To MoGo </h1><a class="header-content-more" href="#">learn more</a>
+          </div>
+          <div class="header-bottom">
+            <div class="header-bottom-item"><span class="header-bottom-number">01</span><span class="header-bottom-intro">Intro</span></div>
+            <div class="header-bottom-item"><span class="header-bottom-number">02</span><span class="header-bottom-intro">Work</span></div>
+            <div class="header-bottom-item"><span class="header-bottom-number">03</span><span class="header-bottom-intro">About</span></div>
+            <div class="header-bottom-item"><span class="header-bottom-number">04</span><span class="header-bottom-intro">Contacts</span></div>
+          </div>
+        </div>
+      </header>
+      <section class="about" id="About">
+        <div class="container"> 
+          <div class="block-box">
+            <h3 class="block-box-caption">What we do</h3>
+            <h1 class="block-box-heading">Story About Us</h1>
+            <p class="block-box-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          </div>
+          <div class="about-list"> 
+            <div class="about-item"> <img class="about-image" src="../images/img-about1.png" alt=""/>
+              <div class="about-content"><i class="about-icon fa fa-user"></i><span class="about-title">Super Team</span></div>
+            </div>
+            <div class="about-item"> <img class="about-image" src="../images/img-about2.png" alt=""/>
+              <div class="about-content"><i class="about-icon fa fa-user"></i><span class="about-title">Super Team</span></div>
+            </div>
+            <div class="about-item"> <img class="about-image" src="../images/img-about3.png" alt=""/>
+              <div class="about-content"><i class="about-icon fa fa-user"></i><span class="about-title">Super Team</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="number">
+        <div class="container"> 
+          <div class="number-list"> 
+            <div class="number-item"> 
+              <h2 class="number-item-count">42</h2><span class="number-item-text">Web design project</span>
+            </div>
+            <div class="number-item"> 
+              <h2 class="number-item-count">123</h2><span class="number-item-text">Happy Client</span>
+            </div>
+            <div class="number-item"> 
+              <h2 class="number-item-count">15</h2><span class="number-item-text">Award winner</span>
+            </div>
+            <div class="number-item"> 
+              <h2 class="number-item-count">99</h2><span class="number-item-text">Cup of coffee</span>
+            </div>
+            <div class="number-item"> 
+              <h2 class="number-item-count">24</h2><span class="number-item-text">Menbers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service" id="Service"> 
+        <div class="container">
+          <div class="block-box">
+            <h3 class="block-box-caption">We work with</h3>
+            <h1 class="block-box-heading">Amazing Service</h1>
+          </div>
+          <div class="service-container">
+            <div class="service-list"> 
+              <div class="service-item"> <img class="service-item-icon" src="../images/img-service-icon1.png"/>
+                <div class="service-item-info"> 
+                  <h2 class="service-item-info-title">Photography</h2>
+                  <p class="service-item-info-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor</p>
+                </div>
+              </div>
+              <div class="service-item"> <img class="service-item-icon" src="../images/img-service-icon2.png"/>
+                <div class="service-item-info"> 
+                  <h2 class="service-item-info-title">Webdesign</h2>
+                  <p class="service-item-info-desc">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor</p>
+                </div>
+              </div>
+              <div class="service-item"> <img class="service-item-icon" src="../images/img-service-icon3.png"/>
+                <div class="service-item-info"> 
+                  <h2 class="service-item-info-title">Creativity</h2>
+                  <p class="service-item-info-desc">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+              </div>
+            </div>
+            <div class="service-list">
+              <div class="service-item"> <img class="service-item-icon" src="../images/img-service-icon4.png"/>
+                <div class="service-item-info"> 
+                  <h2 class="service-item-info-title">SEO</h2>
+                  <p class="service-item-info-desc">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmd tempor.</p>
+                </div>
+              </div>
+              <div class="service-item"> <img class="service-item-icon" src="../images/img-service-icon5.png"/>
+                <div class="service-item-info"> 
+                  <h2 class="service-item-info-title">CSS/HTML</h2>
+                  <p class="service-item-info-desc">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
+                </div>
+              </div>
+              <div class="service-item"> <img class="service-item-icon" src="../images/img-service-icon6.png"/>
+                <div class="service-item-info"> 
+                  <h2 class="service-item-info-title">Digital</h2>
+                  <p class="service-item-info-desc">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="device" id="device">
+        <div class="container"> 
+          <div class="block-box">
+            <h3 class="block-box-caption">For all devices</h3>
+            <h1 class="block-box-heading">Unique Design</h1>
+          </div>
+          <div class="device-media"><img class="device-image" src="../images/img-devices.png"></div>
+        </div>
+      </section>
+      <section class="wedo"> 
+        <div class="container"> 
+          <div class="block-box">
+            <h3 class="block-box-caption">Service</h3>
+            <h1 class="block-box-heading">What we do</h1>
+            <p class="block-box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor in eius similique iste debitis deleniti dolorem blanditiis distinctio, id exercitationem, accusantium expedita placeat. Delectus officiis reiciendis fugit, dolor debitis ipsa?</p>
+          </div>
+          <div class="wedo-container"> <img class="wedo-image" src="../images/img-wedo.png">
+            <div class="wedo-content">
+              <div class="wedo-item is-active">
+                <div class="wedo-item-header"> <img class="wedo-item-header-icon" src="../images/img-wedo-icon1.png"/>
+                  <h3 class="wedo-item-header-title">Photography</h3><i class="fa fa-angle-up wedo-item-header-arrow"></i>
+                </div>
+                <div class="wedo-item-content">
+                  <div class="wedo-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus fugiat nostrum nemo, sequi odit repellat ullam consequatur sed! Odio neque, sint hic dolorum fugiat tenetur suscipit impedit voluptates aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus fugiat nostrum nemo, sequi odit repellat ullam consequatur sed! Odio neque, sint hic dolorum fugiat tenetur suscipit impedit voluptates aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus fugiat nostrum nemo, sequi odit repellat ullam consequatur sed! Odio neque, sint hic dolorum fugiat tenetur suscipit impedit voluptates aut.</div>
+                </div>
+              </div>
+              <div class="wedo-item">
+                <div class="wedo-item-header"> <img class="wedo-item-header-icon" src="../images/img-wedo-icon2.png"/>
+                  <h3 class="wedo-item-header-title">Creativity</h3><i class="fa fa-angle-up wedo-item-header-arrow"></i>
+                </div>
+                <div class="wedo-item-content">
+                  <div class="wedo-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus fugiat nostrum nemo, sequi odit repellat ullam consequatur sed! Odio neque, sint hic dolorum fugiat tenetur suscipit impedit voluptates aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus fugiat nostrum nemo, sequi odit repellat ullam consequatur sed! Odio neque, sint hic dolorum fugiat tenetur suscipit impedit voluptates aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus fugiat nostrum nemo, sequi odit repellat ullam consequatur sed! Odio neque, sint hic dolorum fugiat tenetur suscipit impedit voluptates aut.</div>
+                </div>
+              </div>
+              <div class="wedo-item">
+                <div class="wedo-item-header"> <img class="wedo-item-header-icon" src="../images/img-wedo-icon3.png"/>
+                  <h3 class="wedo-item-header-title">Web Design</h3><i class="fa fa-angle-up wedo-item-header-arrow"></i>
+                </div>
+                <div class="wedo-item-content">
+                  <div class="wedo-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus fugiat nostrum nemo, sequi odit repellat ullam consequatur sed! Odio neque, sint hic dolorum fugiat tenetur suscipit impedit voluptates aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus fugiat nostrum nemo, sequi odit repellat ullam consequatur sed! Odio neque, sint hic dolorum fugiat tenetur suscipit impedit voluptates aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus fugiat nostrum nemo, sequi odit repellat ullam consequatur sed! Odio neque, sint hic dolorum fugiat tenetur suscipit impedit voluptates aut.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="quote">
+        <div class="container"> 
+          <div class="quote-container"> 
+            <div class="quote-content"> <img class="quote-content-icon" src="../images/img-quote.png">
+              <div class="quote-content-info"> 
+                <div class="quote-content-info-desc"> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae in numquam dicta, consectetur repudiandae optio, minima cum soluta aliquid ipsa excepturi illo autem voluptas nostrum, exercitationem reiciendis id molestiae incidunt!"</div><span class="quote-content-info-author">Jon Doe</span>
+              </div>
+            </div>
+            <div class="quote-content"> <img class="quote-content-icon" src="../images/img-quote.png">
+              <div class="quote-content-info"> 
+                <div class="quote-content-info-desc"> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae in numquam dicta, consectetur repudiandae optio, minima cum soluta aliquid ipsa excepturi illo autem voluptas nostrum, exercitationem reiciendis id molestiae incidunt!"</div><span class="quote-content-info-author">Jon Doe</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <div class="block-box">
+            <h3 class="block-box-caption">Who are you</h3>
+            <h1 class="block-box-heading">Meet our Team</h1>
+            <p class="block-box-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="team-list"> 
+            <div class="team-item">
+              <div class="team-main"> <img class="team-images" src="../images/img-team1.png"/>
+                <div class="team-content">
+                  <ul class="team-social">
+                    <li class="team-social-item"><a class="team-social-link" href="Matthew"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="team-social-item"><a class="team-social-link" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="team-social-item"><a class="team-social-link"><i class="fab fa-pinterest"></i></a></li>
+                    <li class="team-social-item"><a class="team-social-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="team-info">
+                <h3 class="team-title">Matthew Dix</h3><span class="team-position">Graphics Design</span>
+              </div>
+            </div>
+            <div class="team-item">
+              <div class="team-main"> <img class="team-images" src="../images/img-team2.png"/>
+                <div class="team-content">
+                  <ul class="team-social">
+                    <li class="team-social-item"><a class="team-social-link" href="chris"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="team-social-item"><a class="team-social-link" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="team-social-item"><a class="team-social-link"><i class="fab fa-pinterest"></i></a></li>
+                    <li class="team-social-item"><a class="team-social-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="team-info">
+                <h3 class="team-title">Christopher Campbell</h3><span class="team-position">Branding/UX design</span>
+              </div>
+            </div>
+            <div class="team-item">
+              <div class="team-main"> <img class="team-images" src="../images/img-team3.png"/>
+                <div class="team-content">
+                  <ul class="team-social">
+                    <li class="team-social-item"><a class="team-social-link" href="michael"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="team-social-item"><a class="team-social-link" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="team-social-item"><a class="team-social-link"><i class="fab fa-pinterest"></i></a></li>
+                    <li class="team-social-item"><a class="team-social-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="team-info">
+                <h3 class="team-title">Michael Fertig </h3><span class="team-position">Developer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="brand">
+        <div class="container"> <img src="../images/img-logos.png"></div>
+      </section>
+      <section class="work"> 
+        <div class="container"> 
+          <div class="block-box">
+            <h3 class="block-box-caption">What we do</h3>
+            <h1 class="block-box-heading">Some of our work</h1>
+            <p class="block-box-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="work-list"> 
+          <div class="work-column"> 
+            <div class="work-item Lorem ipsum dolor sit"><img class="work-image" src="../images/img-work1.png"/>
+              <div class="work-content"> <i class="work-icon far fa-image"></i>
+                <h3 class="work-content-title">Creatively Desgined</h3><span class="work-content-desc"></span>
+              </div>
+            </div>
+            <div class="work-item Lorem ipsum dolor sit"><img class="work-image" src="../images/img-work2.png"/>
+              <div class="work-content"> <i class="work-icon far fa-image"></i>
+                <h3 class="work-content-title">Creatively Desgined</h3><span class="work-content-desc"></span>
+              </div>
+            </div>
+          </div>
+          <div class="work-column"> 
+            <div class="work-item Lorem ipsum dolor sit"><img class="work-image" src="../images/img-work3.png"/>
+              <div class="work-content"> <i class="work-icon far fa-image"></i>
+                <h3 class="work-content-title">Creatively Desgined</h3><span class="work-content-desc"></span>
+              </div>
+            </div>
+            <div class="work-item Lorem ipsum dolor sit"><img class="work-image" src="../images/img-work4.png"/>
+              <div class="work-content"> <i class="work-icon far fa-image"></i>
+                <h3 class="work-content-title">Creatively Desgined</h3><span class="work-content-desc"></span>
+              </div>
+            </div>
+          </div>
+          <div class="work-column"> 
+            <div class="work-item work-item--full"><img class="work-image" src="../images/img-work5.png"/>
+              <div class="work-content"> <i class="work-icon far fa-image"></i>
+                <h3 class="work-content-title">Creatively Desgined</h3><span class="work-content-desc">Lorem ipsum dolor sit</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-column"> 
+            <div class="work-item Lorem ipsum dolor sit"><img class="work-image" src="../images/img-work6.png"/>
+              <div class="work-content"> <i class="work-icon far fa-image"></i>
+                <h3 class="work-content-title">Creatively Desgined</h3><span class="work-content-desc"></span>
+              </div>
+            </div>
+            <div class="work-item Lorem ipsum dolor sit"><img class="work-image" src="../images/img-work7.png"/>
+              <div class="work-content"> <i class="work-icon far fa-image"></i>
+                <h3 class="work-content-title">Creatively Desgined</h3><span class="work-content-desc"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="quote">
+        <div class="container"> 
+          <div class="quote-container"> 
+            <div class="quote-content"> <img class="quote-content-icon" src="../images/img-quote.png">
+              <div class="quote-content-info"> 
+                <div class="quote-content-info-desc"> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae in numquam dicta, consectetur repudiandae optio, minima cum soluta aliquid ipsa excepturi illo autem voluptas nostrum, exercitationem reiciendis id molestiae incidunt!"</div><span class="quote-content-info-author">Jon Doe</span>
+              </div>
+            </div>
+            <div class="quote-content"> <img class="quote-content-icon" src="../images/img-quote.png">
+              <div class="quote-content-info"> 
+                <div class="quote-content-info-desc"> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae in numquam dicta, consectetur repudiandae optio, minima cum soluta aliquid ipsa excepturi illo autem voluptas nostrum, exercitationem reiciendis id molestiae incidunt!"</div><span class="quote-content-info-author">Jon Doe</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="people">
+        <div class="container"> 
+          <div class="block-box">
+            <h3 class="block-box-caption">Happy clients</h3>
+            <h1 class="block-box-heading">What people say</h1>
+          </div>
+          <div class="people-list">
+            <div class="people-item"> <img class="people-avatar" src="../images/img-people1.png">
+              <div class="people-info"> 
+                <h3 class="people-name">Matthew Dix </h3><span class="people-job">Graphics Design </span>
+                <p class="people-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="people-item"> <img class="people-avatar" src="../images/img-people2.png">
+              <div class="people-info"> 
+                <h3 class="people-name">Nick Karvounis </h3><span class="people-job">Graphics Design </span>
+                <p class="people-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="people-item"> <img class="people-avatar" src="../images/img-people3.png">
+              <div class="people-info"> 
+                <h3 class="people-name">Jaelynn Castillo  </h3><span class="people-job">Graphics Design </span>
+                <p class="people-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="people-item"> <img class="people-avatar" src="../images/img-people4.png">
+              <div class="people-info"> 
+                <h3 class="people-name">Mike Petrucci</h3><span class="people-job">Graphics Design </span>
+                <p class="people-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="story"> 
+        <div class="container"> 
+          <div class="block-box">
+            <h3 class="block-box-caption">Our stories</h3>
+            <h1 class="block-box-heading">Latest Blog</h1>
+          </div>
+          <ul class="story-list"> 
+            <li class="story-item"> 
+              <div class="story-media"><img class="story-image" src="../images/img-blog1.png">
+                <div class="story-date"> 
+                  <h3 class="story-date-number">15</h3>
+                  <p class="story-date-text">Jan</p>
+                </div>
+              </div>
+              <div class="story-content"> 
+                <h3 class="story-title">Lorem ipsum dolor sit amet.</h3>
+                <p class="story-desc">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="story-meta"> 
+                <div class="story-meta-item"><i class="fas fa-eye story-meta-icon"> </i><span class="story-meta-number">542</span></div>
+                <div class="story-meta-item"><i class="fas fa-comment story-meta-icon"> </i><span class="story-meta-number">17</span></div>
+              </div>
+            </li>
+            <li class="story-item"> 
+              <div class="story-media"><img class="story-image" src="../images/img-blog2.png">
+                <div class="story-date"> 
+                  <h3 class="story-date-number">14</h3>
+                  <p class="story-date-text">Jan</p>
+                </div>
+              </div>
+              <div class="story-content"> 
+                <h3 class="story-title">sed do eiusmod tempor</h3>
+                <p class="story-desc">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="story-meta"> 
+                <div class="story-meta-item"><i class="fas fa-eye story-meta-icon"> </i><span class="story-meta-number">992</span></div>
+                <div class="story-meta-item"><i class="fas fa-comment story-meta-icon"> </i><span class="story-meta-number">42</span></div>
+              </div>
+            </li>
+            <li class="story-item"> 
+              <div class="story-media"><img class="story-image" src="../images/img-blog3.png">
+                <div class="story-date"> 
+                  <h3 class="story-date-number">12</h3>
+                  <p class="story-date-text">Jan</p>
+                </div>
+              </div>
+              <div class="story-content"> 
+                <h3 class="story-title">incididunt ut labore et dolore</h3>
+                <p class="story-desc">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="story-meta"> 
+                <div class="story-meta-item"><i class="fas fa-eye story-meta-icon"> </i><span class="story-meta-number">1560</span></div>
+                <div class="story-meta-item"><i class="fas fa-comment story-meta-icon"> </i><span class="story-meta-number">98</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="map">
+        <div class="container"> 
+          <div class="map-content"><img class="map-image" src="../images/img-map-icon.png">
+            <h1 class="map-title">One map</h1>
+          </div>
+        </div>
+      </section>
+      <footer class="footer"> 
+        <div class="container"> 
+          <div class="footer-top"> 
+            <div class="footer-column">
+              <h3 class="footer-heading footer-heading--logo">MoGo</h3>
+              <p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+              <p class="footer-followers"><strong>15k</strong> followers</p>
+              <div class="footer-social"><span class="footer-social-text">follow Us: </span>
+                <div class="follow-social-list"><i class="fab fa-facebook footer-social-icon"></i><i class="fab fa-facebook footer-social-icon"></i><i class="fab fa-facebook footer-social-icon"></i><i class="fab fa-facebook footer-social-icon"></i><i class="fab fa-facebook footer-social-icon"></i><i class="fab fa-facebook footer-social-icon"></i><i class="fab fa-facebook footer-social-icon"></i><i class="fab fa-facebook footer-social-icon"></i></div>
+              </div>
+              <form class="footer-form">
+                <input class="footer-form-input" type="text" placeholder=" enter your email...">
+                <button class="footer-form-button">Subscribe </button>
+              </form>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-heading">Blogs </h3>
+              <div class="footer-item"> <img class="footer-item-image" src="../images/img-blogs1.png">
+                <div class="footer-item-info">
+                  <p class="footer-item-title">Lorem ipsum dolor sit amet,consectetur adipiscing </p><span class="footer-item-date">jan 9,2016</span>
+                </div>
+              </div>
+              <div class="footer-item"> <img class="footer-item-image" src="../images/img-blogs2.png">
+                <div class="footer-item-info">
+                  <p class="footer-item-title">Consectetur adipiscing elit,  sed do eiusmod tempor</p><span class="footer-item-date">jan 9,2016</span>
+                </div>
+              </div>
+              <div class="footer-item"> <img class="footer-item-image" src="../images/img-blogs3.png">
+                <div class="footer-item-info">
+                  <p class="footer-item-title">sed do eiusmod tempor  incididunt ut labore</p><span class="footer-item-date">jan 9,2016</span>
+                </div>
+              </div>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-heading">Instagram </h3>
+              <div class="footer-images"> 
+                <div class="footer-images-image"><img src="../images/img-instagram1.png"></div>
+                <div class="footer-images-image"><img src="../images/img-instagram2.png"></div>
+                <div class="footer-images-image"><img src="../images/img-instagram3.png"></div>
+                <div class="footer-images-image"><img src="../images/img-instagram4.png"></div>
+                <div class="footer-images-image"><img src="../images/img-instagram5.png"></div>
+                <div class="footer-images-image"><img src="../images/img-instagram6.png"></div>
+                <div class="footer-images-image"><img src="../images/img-instagram7.png"></div>
+                <div class="footer-images-image"><img src="../images/img-instagram8.png"></div>
+                <div class="footer-images-image"><img src="../images/img-instagram9.png"></div>
+              </div>
+              <div class="footer-images-more">View more photos</div>
+            </div>
+          </div>
+          <div class="footer-bottom"> &copy Mogo free PSD template by <span>Laaqiq</span></div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

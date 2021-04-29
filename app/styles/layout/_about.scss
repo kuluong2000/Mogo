@@ -1,0 +1,94 @@
+.about{
+	padding-top: 9rem;
+	padding-bottom: 10.5rem;
+	@include bg-color(white);
+	//use gridBox
+	&-list{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-column-gap: 2.5rem;
+	}
+	// &-list{
+	//     display: flex;
+	//     flex-wrap: wrap;
+	//     margin-left: -3rem;
+	// }
+	&-item{
+		width: calc(33.33%- 2.5rem);
+		position: relative;
+		z-index:1 ;
+		transition: transform 0.5s linear;
+	   
+		&::after{
+			content: "";
+			@include absoluteFull();
+			//transform: translate(1rem,1rem);
+			z-index: -1;
+			transition: transform 0.5s linear;
+			
+		
+		}
+	}
+	&-content{
+		@include absoluteFull();
+		background: linear-gradient(
+			to bottom,
+			rgba($primary-color,06),
+			rgba($secondary-color,0.6)
+		);
+		z-index: 2;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-transform: uppercase;
+		cursor: pointer;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s linear;
+	}
+	&-item:hover{
+		transform: translate(-1rem,-1rem);
+		.about-content{
+			opacity: 1;
+			visibility: visible;
+		}
+		&::after{
+			transform: translate(1rem,1rem);
+			@include bg-color($third-color);
+		}
+	}
+	&-icon{
+		font-size: 2rem;
+		margin-bottom: 1rem;    
+	}
+	&-title{
+		font-size: 1.8rem;
+		font-weight: bold;
+		text-align: center;
+		@include textClamp();//nếu đoạn text quá dài, thì sẽ xử lý thành dấu 3 chấm
+	   
+	}
+}
+@include maxWidth(767px){
+	.about {
+		padding:4rem 0;
+	}
+	.about-list{
+		grid-template-columns: unset;
+		grid-auto-columns: 80%;
+		grid-auto-flow: column;
+		overflow-x: auto;
+		padding: 1rem;
+		//muot hon khi scroll
+		scroll-snap-type: x mandatory;
+		scroll-snap-stop: always;
+		@include hideScroll();
+	}
+	.about-item{
+		margin-left: 0.2rem;
+		//vitri scroll
+		scroll-snap-align: center;
+	}
+}

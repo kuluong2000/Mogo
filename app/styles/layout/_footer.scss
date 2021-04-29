@@ -1,0 +1,172 @@
+.footer{
+    &-top{
+        padding: 7rem 0 7rem;
+        @include flexBox(flex,space-between,stretch);
+    
+    }
+    
+    &-heading{
+        font-weight: 500;
+        text-transform: uppercase;
+        height:4rem;
+        margin-bottom: 2rem;
+        
+        &--logo{
+            font-size: 4.6rem;
+            color:$gray-dark-color;
+            text-transform:none;
+            font-weight: bold;
+            
+            
+            
+        }
+    }
+    &-desc{
+        color: $text-color;
+        margin-bottom: 4.5rem;
+        padding-top: 2rem;
+        line-height: 1.6;
+    }
+    &-followers{
+        strong{
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    &-social{
+        @include flexBox(flex,flex-start,center);
+        margin-bottom: 4rem;
+        &-text{
+            font-style: italic;
+            font-family: $secondary-font;
+            font-size: 1.5rem;
+            color: $text-color;
+            font-weight: 200;
+        }
+        &-icon{
+            color: $third-color;
+            margin-left: 2rem;
+            font-size: 1.6rem;
+        }
+    }
+    &-form{
+        width: 100%;
+        max-width: 38rem;
+        @include flexBox();
+        &-input{
+            padding: 1.5rem;
+            @include bg-color(white);
+            font-size: 1.5rem;
+            font-family: $secondary-font;
+            border:1px solid #e5e5e5;
+            outline: none;
+            border-right: 0;
+            color: $text-color;
+            font-style: italic;
+            width: 100%;
+        }
+        &-button{
+            padding: 1.5rem;
+            text-transform: uppercase;
+            @include bg-color($third-color);
+            color: white;
+            border: 1px solid #e5e5e5;
+            outline: none;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+    }
+    &-column{
+        width: calc(35% - 2.5rem);
+        &:first-child{
+            width: calc(40% - 2.5rem);
+        }
+        &:last-child{
+            width: calc(25% - 2.5rem);
+        }
+    }
+    &-item{
+        @include flexBox;
+        margin-bottom: 3rem;
+        &-info{
+            margin-left: 3rem;
+        }
+        &-title{
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            line-height: 1.4;  
+            font-size: 1.2rem;
+        }
+        &-date{
+            color: $text-color;
+            font-size: 1.3rem;
+            font-style: italic;
+            font-family: $secondary-font;
+
+        }
+        &-image{
+            @include size(12rem,8rem);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+    }
+    &-images{
+        @include flexBox(flex,flex-start,stretch,row,wrap);
+        margin-left: -2px;
+        &-more{
+            color: $text-color;
+            font-size: $secondary-font;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 200;
+            padding-top: 2rem;
+        }
+        &-image{
+            margin-left: 2px;
+            width: calc(33.33% - 2px);
+            margin-bottom: 2px;
+            //trick hack img
+                //padding-bottom: 33.33%;
+                 //position:relative;
+            
+            img{
+                //position:absolute;
+                //top:0;
+                //left:0;
+                width: 100%;
+                object-fit: cover;
+                flex-shrink: 0;
+            }
+
+        }
+    }
+    &-bottom{
+        font-size: 1.4rem;
+        font-weight: bold;
+        color:$title-color;
+        text-align: center;
+        
+        span{
+            color: $primary-color;
+        }
+    }
+    @include maxWidth(1023px){
+        &-top{
+            display: inline-block;
+            padding: 4rem 0;
+        }
+        &-column:not(:nth-child(99)){
+            width: 100%;
+        }
+        &-heading{
+            padding-top: 2rem;
+        }
+        &-social-icon{
+            margin-left: 1rem;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.quote{
+	padding: 7rem 0;
+	@include bg-color($gray-color);
+	&-container{
+		@include flexBox(flex,center,center);
+		margin: 0 2rem;
+	}
+	&-arrow-left,
+	&-arrow-right{
+		color: $text-color;
+		font-size: 3rem;
+		font-weight: 500;
+		cursor: pointer;
+	}
+	&-content{
+		@include flexBox();
+		margin: 0 7rem;
+		&-icon{
+			width: 15rem;
+			height: 15rem;
+			padding: 45px;
+			border:3px solid $third-color;
+		}
+		&-info{
+			padding-left: 6rem;
+			&-desc{
+				color: $text-color;
+				font-family: $secondary-font;
+				font-style: italic;
+				font-weight: 300;
+				font-size: 2.4rem;
+				line-height: 1.4;
+				@include textClamp(3);
+				margin-bottom: 2.5rem;
+			}
+			&-author{
+				font-size: 2.4rem;
+				font-family: $third-font;
+				position: relative;
+				padding-left: 7rem;
+				&:before{
+					content: "";
+					@include absoluteCenter("top");
+					@include size(6rem,4px);
+					@include bg-color($primary-color);
+					left: 0;
+				}
+			}
+		}
+
+	}
+	//slick slider
+	.slick-initialized .slick-slide {
+		display: flex;
+	}
+	.slick-arrow{
+		background-color: transparent;
+		border: 0;
+		font-size: 3rem;
+		color: $text-color;
+		cursor: pointer;
+		@include absoluteCenter(top);
+		
+	}
+	.slick-prev{
+		left: 0;
+		z-index: 2;
+	}
+	.slick-next{
+		right: 0;
+	}
+	@include maxWidth(767px){
+		padding: 5rem 0;
+		&-container{
+			margin: 0 ;
+		}
+		&-arrow-left,
+		&-arrow-right{
+			display: none;
+		}
+		&-content{
+			margin: 0;
+			flex-direction: column;
+			align-items: center;
+			
+		}
+		&-content-info {
+			padding-left: 0;
+			margin-top: 3rem; 
+			&-desc{
+				font-size: 2rem;
+				display: block;
+				text-align: center;
+			}
+			&-author{
+				font-size: 2rem;
+				left: 30%
+			}
+		}
+		&-content-icon{
+			@include size(10rem,10rem);
+			padding: 2rem;
+	
+		}
+
+		
+	}
+}

@@ -1,0 +1,107 @@
+.team {
+	padding: 11rem 0;
+	&-item{
+		cursor: pointer;
+	}
+	&-list{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-column-gap:3rem;
+	}
+	&-main{
+		position: relative;
+		z-index: 1;
+		transition: transform 0.5s linear;
+		&:after{
+			content: "";
+			@include absoluteFull();
+			@include bg-color($third-color);
+			z-index: -1;
+			transition: all.5s linear;
+		}
+		&:hover{
+			transform: translate(-1rem, -1rem);
+			.team-content{
+				visibility: visible;
+				opacity: 1;
+			}
+			&:after{
+				transform: translate(1rem,1rem);
+			}
+			
+		}
+	}
+	
+	&-content{
+		@include flexBox(flex,center,center);
+		@include absoluteFull;
+		background: linear-gradient(to bottom,
+		rgba($primary-color,0.6),
+		rgba($secondary-color,0.6)		
+		);
+		opacity: 0;
+		visibility: hidden;
+		z-index: 2;
+		transition: all .5s linear;
+	}
+	
+	&-images{
+		width: 100%;
+		object-fit: cover;
+	}
+	&-social{
+		@include flexBox;
+		&-link{
+			@include flexBox(flex,center,center,columns);
+			@include size(6rem,6rem);
+			@include bg-color($secondary-color);
+			color: $primary-color;
+			font-size: 2rem;
+			&:hover{
+				color: white;
+				@include bg-color($primary-color);
+			}
+			
+		}
+	}
+
+	&-info{
+		text-align: center;
+		margin-top: 3rem;
+	}
+	&-title{
+		text-transform: uppercase;
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+	}
+	&-position{
+		font-size: 1.5rem;
+		font-family: $secondary-font;
+		font-style: italic;
+		font-weight: 300;
+		color: $text-color;
+	}
+
+	//brands
+	@include maxWidth(1023px){
+		padding: 5rem 0;
+		&-images{
+			height: 40rem;
+		}
+		&-list{
+			@include scrollsnap(60%);
+		}
+	}
+	@include maxWidth(767px){
+		&-list{
+			@include scrollsnap(80%);
+		}	
+	}
+}
+.brand{
+	padding: 6rem 0;
+	@include bg-color($gray-color);
+	@include maxWidth(767px){
+		padding: 2rem 0;
+	}
+}
