@@ -23,13 +23,20 @@ mixin blockBox(caption,title,desc)
 		if desc 
 			p.block-box-desc=desc
 
-mixin aboutItem(src , iconClass , title , alt="")
-	.about-item 
-		img.about-image(src= src,alt= alt)
-		.about-content
-			i.about-icon(class= iconClass)
-			span.about-title= title
 
+//- mixin aboutItem(src , iconClass , title , alt="")
+//- 	.about-item 
+//- 		img.about-image(src= src,alt= alt)
+//- 		.about-content
+//- 			i.about-icon(class= iconClass)
+//- 			span.about-title= title
+//Object mixin aboutItem
+mixin aboutItem(data)
+	.about-item 
+		img.about-image(src= data.src,alt= data.alt)
+		.about-content
+			i.about-icon(class= data.iconClass)
+			span.about-title= data.title
 //mixin for blocknumber
 mixin blockNumber(number , text)
 	.number-item 

@@ -37,7 +37,6 @@ $(document).ready(function(){
 
 
 
-
 //window.addEventListener('scroll', function(){
 //      const header= document.querySelector('.header-top');
 //      header.classList.toggle("sticky", window.scrollY >0);
@@ -53,4 +52,21 @@ function menuToggle(){
             menuToggle.classList.remove('active');
         }
     });
+}
+function wedo_click(){
+  const openn = document.querySelector('.wedo-item-header');
+  const closee = document.querySelector('.open')
+  const item= document.querySelector('.wedo-item-content');
+  const icon = document.querySelector('.wedo-item-header-arrow')
+  
+  openn.classList.toggle('open');
+  item.style.display ="none"
+  closee.classList.toggle('close');
+  item.style.display ="block";
+  
+  closee.classList.remove('close');
+  closee.classList.remove('open');
+  
+  
+  
 }
